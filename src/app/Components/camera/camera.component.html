@@ -1,0 +1,10 @@
+
+<div class="camera-container">
+    <img [src]="imgUrl" alt="Captured Image" class="captured-image">
+
+    <button (click)="takePicture()" class="take-picture-button">📷 Toma una Foto</button>
+
+    <div *ngIf="errorMessage" class="error-message">
+        {{ errorMessage }}
+    </div>
+</div>

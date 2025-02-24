@@ -1,0 +1,32 @@
+*{
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+.camera-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.captured-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.take-picture-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.take-picture-button:hover {
+    background-color: #0056b3;
+}
