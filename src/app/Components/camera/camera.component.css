@@ -1,32 +1,85 @@
-*{
-    color: white;
-    margin: 0;
-    padding: 0;
-}
 .camera-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 400px;
+    padding: 20px;
 }
 
 .captured-image {
     max-width: 100%;
-    height: auto;
+    max-height: 300px;
+    border-radius: 8px;
     margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.placeholder {
+    width: 200px;
+    height: 200px;
+    background-color: #1a1a1a;
+    border: 2px dashed #555;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.placeholder-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+    opacity: 0.5;
+}
+
+.placeholder-text {
+    font-size: 14px;
+    color: #999;
 }
 
 .take-picture-button {
-    padding: 10px 20px;
+    padding: 12px 24px;
     font-size: 16px;
-    background-color: #007bff;
+    background-color: #673ab7;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .take-picture-button:hover {
-    background-color: #0056b3;
+    background-color: #7e57c2;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.take-picture-button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.loading-spinner {
+    animation: spin 1s linear infinite;
+    display: inline-block;
+}
+
+.error-message {
+    margin-top: 15px;
+    color: #ff6b6b;
+    background-color: rgba(255, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    border-left: 3px solid #ff6b6b;
+    max-width: 300px;
+    text-align: center;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
